@@ -1,4 +1,4 @@
-# UC Irvine Math 9, Winter 2025
+# UC Irvine Math 9, Summer Session I 2025
 
 
 Welcome to the python portion of Math 9 at UC Irvine.
