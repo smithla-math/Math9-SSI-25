@@ -6,7 +6,7 @@ root: intro
 parts:
   - caption: "Week 4"
     chapters:  
-      - file: lectures/lec9_10_SSI_25
+      - file: lectures/lec09_10_SSI_25
       - file: lectures/lec11_12_SSI_25
       - file: homework/pyhw1
   - caption: "Week 5"
