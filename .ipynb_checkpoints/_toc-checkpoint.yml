@@ -13,7 +13,7 @@ parts:
     chapters:
       - file: lectures/lec12_13_SSI_25
       - file: lectures/lec13_14_SSI_25
-      - file: homework/pyhw2_WI25
+      - file: homework/pyhw2
   - caption: "Week 6"
     chapters:
       - file: lectures/lec14_15_16_SSI_25

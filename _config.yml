@@ -11,7 +11,8 @@ execute:
   exclude_patterns:
     - 'Week?/*.ipynb'
     - 'homework/pyhw1_part1.ipynb'
-    - 'homework/pyhw2_part1.ipynb'
+    - 'homework/pyhw1_part2.ipynb'
+    - 'homework/pyhw2_WI25.ipynb'
   # - 'Week2/*.ipynb'
   #   - 'Week1/Homework1.ipynb'
   #   - 'Week2/Quiz1-Practice.ipynb'
