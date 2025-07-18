@@ -178,9 +178,10 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="lec12_intermission.html">Intermission: Plotting in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lec12_13_SSI_25.html">Lectures 12-13</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lec13_14_SSI_25.html">Lectures 13-14</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../homework/pyhw2_WI25.html">Python Homework #2 from Winter 2025</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/pyhw2.html">Python Homework #2</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 6</span></p>
 <ul class="nav bd-sidenav">
@@ -468,7 +469,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>23.5 ns ± 1.66 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22.9 ns ± 0.7 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -482,7 +483,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25.9 ns ± 1.8 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22.6 ns ± 0.904 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -496,7 +497,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>31 ns ± 2.03 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>27.6 ns ± 0.746 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -511,7 +512,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>17.9 ms ± 751 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>17.5 ms ± 580 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre></div>
 </div>
 </div>
@@ -525,7 +526,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22.4 ms ± 4.29 ms per loop (mean ± std. dev. of 7 runs, 100 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>19.2 ms ± 944 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre></div>
 </div>
 </div>
@@ -539,7 +540,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>31.9 ns ± 2.23 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>31.2 ns ± 1.52 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -614,13 +615,13 @@
 <p>What’s going on here? Notice that because <code class="docutils literal notranslate"><span class="pre">return</span></code> is in the for-loop, we exit the function right after we append one 3 to <code class="docutils literal notranslate"><span class="pre">mylist</span></code>. To fix this, we have to move <code class="docutils literal notranslate"><span class="pre">return</span></code> outside of the for-loop.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">constant</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">mylist</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>   <span class="c1">#underscore is useful when you don&#39;t use the variable in the loop</span>
         <span class="n">mylist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">mylist</span>
 
-<span class="n">f</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">constant</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -633,31 +634,7 @@
 <p>Finally, our function should work as expected.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3, 3, 3]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3, 3, 3, 3]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">constant</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -669,7 +646,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">constant</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -679,7 +656,7 @@
 </div>
 </div>
 </div>
-<p>Notice I ran <code class="docutils literal notranslate"><span class="pre">f(7)</span></code> above. Within the function <code class="docutils literal notranslate"><span class="pre">n</span></code> was set to 7. But <code class="docutils literal notranslate"><span class="pre">n</span></code> does not persist outside of the function.</p>
+<p>Notice I ran <code class="docutils literal notranslate"><span class="pre">constant(7)</span></code> above. Within the function <code class="docutils literal notranslate"><span class="pre">n</span></code> was set to 7. But <code class="docutils literal notranslate"><span class="pre">n</span></code> does not persist outside of the function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span>
@@ -689,7 +666,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">21</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">n</span>
 
 <span class="ne">NameError</span>: name &#39;n&#39; is not defined
@@ -701,7 +678,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">f</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">constant</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -727,19 +704,7 @@
 </section>
 <section id="alternating-list-version-1">
 <h3>Alternating List - Version 1<a class="headerlink" href="#alternating-list-version-1" title="Link to this heading">#</a></h3>
-<p>Let’s copy-paste our constant function. We will make use of it here.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">constant</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="n">mylist</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="n">mylist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">mylist</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now we try to write our alternating function. Our strategy is to first create a length <span class="math notranslate nohighlight">\(n\)</span> list of 3s, and then change the odd indices to be 7s.</p>
+<p>Now we try to write our alternating function. Our strategy is to first create a length <span class="math notranslate nohighlight">\(n\)</span> list of 3s, and then change the odd indices to be 7s. We already have a <code class="docutils literal notranslate"><span class="pre">constant(n)</span></code> function, so let’s use it inside of our code for <code class="docutils literal notranslate"><span class="pre">alt1(n)</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">alt1</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -795,11 +760,28 @@
 </div>
 </div>
 </div>
-<p>The nice thing about <code class="docutils literal notranslate"><span class="pre">alt1(n)</span></code> is that we didn’t need to check if indices of <code class="docutils literal notranslate"><span class="pre">mylist</span></code> were even or odd.</p>
 </section>
 <section id="alternating-list-version-2">
 <h3>Alternating List - Version 2<a class="headerlink" href="#alternating-list-version-2" title="Link to this heading">#</a></h3>
 <p>Let’s see another way of writing a function that does the same thing as <code class="docutils literal notranslate"><span class="pre">alt1(n)</span></code>. The strategy this time is to check whether an index is even or odd.</p>
+<p>Recall: We can use <code class="docutils literal notranslate"><span class="pre">m%n</span></code> to check the remainder of <code class="docutils literal notranslate"><span class="pre">m</span></code> divded by <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">5</span><span class="o">%</span><span class="k">2</span>)
+<span class="nb">print</span><span class="p">(</span><span class="mi">7</span><span class="o">%</span><span class="k">2</span>)
+<span class="nb">print</span><span class="p">(</span><span class="mi">4</span><span class="o">%</span><span class="k">2</span>)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+1
+0
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Observe:</strong> even numbers have a remainder of 0 when we divide by 2, and odd numbers have a remainder of 1 when we divide by 2.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">alt2</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -814,6 +796,7 @@
 </div>
 </div>
 </div>
+<p>Notice how we didn’t need to specify an <code class="docutils literal notranslate"><span class="pre">elif</span></code>. This is because an integer only has two possible remainders when we divide by 2. If the remainder is not 0, it must be 1.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cycle_three</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>  <span class="c1">#gives lists of the form [3, 7, 6, 3, 7, 6, ... ]</span>
@@ -830,45 +813,6 @@
 </div>
 </div>
 </div>
-<p>Notice how we didn’t need to specify an <code class="docutils literal notranslate"><span class="pre">elif</span></code>. This is because an integer only has two possible remainders when we divide by 2. If the remainder is not 0, it must be 1.</p>
-<p>Recall: We can use <code class="docutils literal notranslate"><span class="pre">m%n</span></code> to check the remainder of <code class="docutils literal notranslate"><span class="pre">m</span></code> divded by <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span><span class="o">%</span><span class="k">2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span><span class="o">%</span><span class="k">2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span><span class="o">%</span><span class="k">2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Observe:</strong> even numbers have a remainder of 0 when we divide by 2, and odd numbers have a remainder of 1 when we divide by 2.</p>
 <p>Now, we test <code class="docutils literal notranslate"><span class="pre">alt2(n)</span></code> and <code class="docutils literal notranslate"><span class="pre">cycle_three(n)</span></code> a few times.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -949,20 +893,6 @@
 </div>
 </div>
 <p>The data type <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> should make you think <span class="math notranslate nohighlight">\(n\)</span>-dimensional array.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0. 0. 0. 0.]
- [0. 0. 0. 0.]
- [0. 0. 0. 0.]]
-</pre></div>
-</div>
-</div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span><span class="o">.</span><span class="n">shape</span>
@@ -1159,7 +1089,7 @@ zeros(...)
 <p>Now let’s try to use NumPy to write another version of our alternating function. We start with creating a constant array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">alt3</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">constant0</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">A</span>
 </pre></div>
@@ -1168,7 +1098,7 @@ zeros(...)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt3</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">constant0</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1180,19 +1110,7 @@ zeros(...)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt3</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4,)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt3</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="mi">3</span>    <span class="c1">#This trick is known as broadcasting, and it works in Matlab. Does not work for lists in Python, but works for ndarrays</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">constant0</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="mi">3</span>    <span class="c1">#This trick is known as broadcasting, and it works for Matlab arrays. Does not work for lists in Python, but works for ndarrays.</span>
 </pre></div>
 </div>
 </div>
@@ -1205,9 +1123,21 @@ zeros(...)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#constant with all threes</span>
-<span class="k">def</span> <span class="nf">alt3</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">constant3</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span> <span class="o">+</span> <span class="mi">3</span>
     <span class="k">return</span> <span class="n">A</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">constant3</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3, 3, 3, 3, 3], dtype=int64)
 </pre></div>
 </div>
 </div>
@@ -1229,7 +1159,7 @@ zeros(...)
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">59</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">53</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">mylist</span> <span class="o">+</span> <span class="mi">3</span>
 
 <span class="ne">TypeError</span>: can only concatenate list (not &quot;int&quot;) to list
@@ -1315,7 +1245,7 @@ zeros(...)
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">66</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">60</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">mylist</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">17</span>
 
 <span class="ne">TypeError</span>: must assign iterable to extended slice
@@ -1343,10 +1273,10 @@ zeros(...)
 <section id="timing-alternating-list-strategies">
 <h3>Timing Alternating List Strategies<a class="headerlink" href="#timing-alternating-list-strategies" title="Link to this heading">#</a></h3>
 <p><strong>Upshot:</strong> NumPy will be much faster than base python!</p>
-<p>Let’s start by copy-pasting our code for <code class="docutils literal notranslate"><span class="pre">alt3(n)</span></code>. Remember, this is the code that used NumPy.</p>
+<p>Let’s start by copy-pasting our code for <code class="docutils literal notranslate"><span class="pre">alt3(n)</span></code> as <code class="docutils literal notranslate"><span class="pre">alt3_np(n)</span></code>. Remember, this is the code that used NumPy.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">alt3</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">alt3_np</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span> <span class="o">+</span> <span class="mi">3</span>
     <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">7</span>
     <span class="k">return</span> <span class="n">A</span>
@@ -1354,14 +1284,14 @@ zeros(...)
 </div>
 </div>
 </div>
-<p>To get a more accurate time comparison, we’re going to write another function <code class="docutils literal notranslate"><span class="pre">alt3_mimic(n)</span></code> which uses lists and is meant to mimic how <code class="docutils literal notranslate"><span class="pre">alt3(n)</span></code> is structured:</p>
+<p>To get a more accurate time comparison, we’re going to write another function <code class="docutils literal notranslate"><span class="pre">alt3_list(n)</span></code> which uses lists and is meant to mimic how <code class="docutils literal notranslate"><span class="pre">alt3np(n)</span></code> is structured:</p>
 <ul class="simple">
 <li><p>Create a length n list of all 3s.</p></li>
 <li><p>Change all of the odd indices to be 7s.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">alt3_mimic</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">alt3_list</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">mylist</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="n">mylist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -1375,24 +1305,24 @@ zeros(...)
 <p>Let’s run a couple of test cases.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt3_mimic</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt3_np</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3, 7, 3, 7, 3, 7, 3, 7, 3, 7]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3, 7, 3, 7, 3, 7, 3, 7, 3, 7], dtype=int64)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt3_mimic</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt3_list</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3, 7, 3, 7, 3]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3, 7, 3, 7, 3, 7, 3, 7, 3]
 </pre></div>
 </div>
 </div>
@@ -1401,12 +1331,12 @@ zeros(...)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>it 
-<span class="n">alt3_mimic</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">alt3_list</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>725 ns ± 25.7 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.34 μs ± 215 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1427,7 +1357,7 @@ zeros(...)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1741164225.9942186
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1752798925.0236928
 </pre></div>
 </div>
 </div>
@@ -1440,7 +1370,7 @@ zeros(...)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1741164226.0004067
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1752798925.0274315
 </pre></div>
 </div>
 </div>
@@ -1450,7 +1380,7 @@ zeros(...)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-<span class="n">alt3_mimic</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">alt3_list</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 <span class="n">t</span> <span class="o">=</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span>
 </pre></div>
@@ -1464,7 +1394,7 @@ zeros(...)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.008254528045654297
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0
 </pre></div>
 </div>
 </div>
@@ -1477,7 +1407,7 @@ zeros(...)
 <span class="k">while</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
     <span class="n">n</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">n</span>
     <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-    <span class="n">alt3_mimic</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">alt3_list</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
     <span class="n">t</span> <span class="o">=</span> <span class="n">end</span><span class="o">-</span><span class="n">start</span>
 </pre></div>
@@ -1491,7 +1421,7 @@ zeros(...)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9.573212385177612
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.566711187362671
 </pre></div>
 </div>
 </div>
@@ -1503,18 +1433,18 @@ zeros(...)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>104857600
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>52428800
 </pre></div>
 </div>
 </div>
 </div>
-<p>Notice: it wouldn’t make sense for us to increment <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">2*n</span></code> at the end of the while-loop. Why?</p>
-<p>Now, let’s see how much faster <code class="docutils literal notranslate"><span class="pre">alt3(n)</span></code>, our NumPy version, can run for the same <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+<p><strong>Notice:</strong> it wouldn’t make sense for us to increment <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">2*n</span></code> at the end of the while-loop. Why?</p>
+<p>Now, let’s see how much faster <code class="docutils literal notranslate"><span class="pre">alt3_np(n)</span></code>, our NumPy version, can run for the same <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-<span class="n">alt3</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">alt3_np</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 <span class="n">t</span> <span class="o">=</span> <span class="n">end</span><span class="o">-</span><span class="n">start</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
@@ -1522,10 +1452,10 @@ zeros(...)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>104857600
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>52428800
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5769360065460205
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.3751065731048584
 </pre></div>
 </div>
 </div>
@@ -1534,7 +1464,7 @@ zeros(...)
 <p>Let’s now keep our NumPy code, but return a list at the very end.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">alt3_list</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">alt3_convert</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span> <span class="o">+</span> <span class="mi">3</span>
     <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">7</span>
     <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>   <span class="c1">#Convert numpy array to a list</span>
@@ -1546,7 +1476,7 @@ zeros(...)
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-<span class="n">alt3_list</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">alt3_convert</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 <span class="n">t</span> <span class="o">=</span> <span class="n">end</span><span class="o">-</span><span class="n">start</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
@@ -1554,10 +1484,10 @@ zeros(...)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>104857600
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>52428800
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10.108603239059448
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.457274436950684
 </pre></div>
 </div>
 </div>
@@ -1587,15 +1517,15 @@ zeros(...)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>104857600
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>52428800
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.996786832809448
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.794637680053711
 </pre></div>
 </div>
 </div>
 </div>
-<p><strong>Takeaway:</strong> Using for-loops is very slow! Avoid them when you can :)</p>
+<p><strong>Takeaway:</strong> For-loops are very slow! Avoid them when you can :)</p>
 </section>
 </section>
 <section id="more-numpy-built-in-methods">
@@ -1721,22 +1651,6 @@ linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None, axis=0)
 </div>
 </div>
 </div>
-<p>The operation we see below also works in Matlab. It is one example of what’s known as broadcasting.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span> <span class="o">+</span> <span class="mi">7</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[7., 7., 7., 7., 7.],
-       [7., 7., 7., 7., 7.],
-       [7., 7., 7., 7., 7.]])
-</pre></div>
-</div>
-</div>
-</div>
-<p>We can convert the floating point to an integer using the <code class="docutils literal notranslate"><span class="pre">dtype</span></code> keyword</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
@@ -1807,7 +1721,7 @@ linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None, axis=0)
 </div>
 </div>
 <p><strong>Method 2:</strong> use <code class="docutils literal notranslate"><span class="pre">np.arange</span></code> to get the pattern, then a new method, <code class="docutils literal notranslate"><span class="pre">reshape</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">np.arange</span></code> is the numpy array version of <code class="docutils literal notranslate"><span class="pre">range</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">np.arange</span></code> is the numpy array version of Matlab’s <code class="docutils literal notranslate"><span class="pre">range</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>  <span class="c1">#list</span>
@@ -1889,7 +1803,7 @@ linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None, axis=0)
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">98</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">91</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 
 <span class="ne">ValueError</span>: cannot reshape array of size 10 into shape (3,2)
