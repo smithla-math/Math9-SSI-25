@@ -6,18 +6,18 @@ root: intro
 parts:
   - caption: "Week 4"
     chapters:  
-      - file: lectures/lec09_10_SSI_25
-      - file: lectures/lec11_12_SSI_25
+      - file: lectures/lec09_11_SSI_25
       - file: homework/pyhw1
   - caption: "Week 5"
     chapters:
-      - file: lectures/lec12_intermission
-      - file: lectures/lec12_13_SSI_25
-      - file: lectures/lec13_14_SSI_25
+      - file: lectures/lec12_SSI_25    
+      - file: lectures/lec12_SSI_25_plotting
+      - file: lectures/lec13_SSI_25
+      - file: lectures/lec14_SSI_25
       - file: homework/pyhw2
   - caption: "Week 6"
     chapters:
-      - file: lectures/lec14_15_16_SSI_25
+      - file: lectures/lec15_16_SSI_25
   - caption: "Final Project"
     chapters:
       - file: final/final-project
