@@ -28,6 +28,7 @@ parts:
     chapters:
       - file: lectures/lec23_24_FA24
       - file: homework/pyhw4_FA24
+      - file: lectures/extra_art
 
 
 
